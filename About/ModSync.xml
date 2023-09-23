@@ -2,7 +2,7 @@
 <ModSyncNinjaData>
   <ID>ad8e957b-1061-4e96-9481-caff0db66823</ID>
   <ModName>Blueprint Material Debt (Continued)</ModName>
-  <Version>1.4.0</Version>
+  <Version>1.4.1</Version>
   <SaveBreaking>False</SaveBreaking>
   <Host name="Github">
     <Owner>emipa606</Owner>
@@ -12,7 +12,3 @@
     <Branch>master</Branch>
   </Host>
 </ModSyncNinjaData>
-
-
-
-

@@ -29,3 +29,6 @@ May exhibit strange behavior if other mods change the value of ThingDef.resource
 -  If you have the solution for a problem, please post it to the GitHub repository.
 
 
+
+https://steamcommunity.com/sharedfiles/filedetails/changelog/3023764871]![Image](https://img.shields.io/github/v/release/emipa606/BlueprintMaterialDebt?label=latest%20version&style=plastic&color=9f1111&labelColor=black)
+

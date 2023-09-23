@@ -1,5 +1,8 @@
 # Changelog for BlueprintMaterialDebt
 
+1.4.1 - Fixed missing requirement in the about-file
+
+
 1.4.0 - First publish.
 Used DeepL to update translations for ChineseSimplified, French, German
 

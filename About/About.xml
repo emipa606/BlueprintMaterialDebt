@@ -15,9 +15,16 @@
       <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
       <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
     </li>
+    <li>
+      <packageId>UnlimitedHugs.HugsLib</packageId>
+      <displayName>HugsLib</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/818773962</steamWorkshopUrl>
+      <downloadUrl>https://github.com/UnlimitedHugs/RimworldHugsLib/releases/latest</downloadUrl>
+    </li>
   </modDependencies>
   <loadAfter>
     <li>brrainz.harmony</li>
+    <li>UnlimitedHugs.HugsLib</li>
   </loadAfter>
   <description>[img]https://i.imgur.com/buuPQel.png[/img]
 Update of Ben Lubars mod https://steamcommunity.com/sharedfiles/filedetails/?id=2615407383
@@ -50,5 +57,7 @@ May exhibit strange behavior if other mods change the value of ThingDef.resource
 [*] For best support, please use the Discord-channel for error-reporting.
 [*] Do not report errors by making a discussion-thread, I get no notification of that.
 [*] If you have the solution for a problem, please post it to the GitHub repository.
-[/list]</description>
+[/list]
+
+[url=https://steamcommunity.com/sharedfiles/filedetails/changelog/3023764871][img]https://img.shields.io/github/v/release/emipa606/BlueprintMaterialDebt?label=latest%20version&amp;style=plastic&amp;color=9f1111&amp;labelColor=black[/img][/url]</description>
 </ModMetaData>
