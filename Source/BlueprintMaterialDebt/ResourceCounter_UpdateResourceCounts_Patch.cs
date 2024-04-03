@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using HarmonyLib;
 using RimWorld;
 using Verse;
 
 namespace BlueprintMaterialDebt;
 
-[HarmonyPatch(typeof(ResourceCounter), nameof(ResourceCounter.UpdateResourceCounts), new Type[0])]
+[HarmonyPatch(typeof(ResourceCounter), nameof(ResourceCounter.UpdateResourceCounts))]
 public static class ResourceCounter_UpdateResourceCounts_Patch
 {
-    private static readonly HashSet<ThingDef> forcedVisible = new HashSet<ThingDef>();
+    private static readonly HashSet<ThingDef> forcedVisible = [];
     public static readonly Dictionary<ThingDef, int> neededAmounts = new Dictionary<ThingDef, int>();
 
     private static void Postfix(Map ___map)
@@ -34,7 +33,7 @@ public static class ResourceCounter_UpdateResourceCounts_Patch
                 continue;
             }
 
-            foreach (var material in blueprint.MaterialsNeeded())
+            foreach (var material in blueprint.TotalMaterialCost())
             {
                 if (neededAmounts.ContainsKey(material.thingDef))
                 {
@@ -59,7 +58,7 @@ public static class ResourceCounter_UpdateResourceCounts_Patch
                 continue;
             }
 
-            foreach (var material in frame.MaterialsNeeded())
+            foreach (var material in frame.TotalMaterialCost())
             {
                 if (neededAmounts.ContainsKey(material.thingDef))
                 {

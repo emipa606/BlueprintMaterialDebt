@@ -18,7 +18,7 @@ internal static class ResourceReadout_DrawResourceSimple_Patch
             return true;
         }
 
-        DrawIcon.Invoke(__instance, new object[] { rect.x, rect.y, thingDef });
+        DrawIcon.Invoke(__instance, [rect.x, rect.y, thingDef]);
 
         rect.y += 2f;
         var count = Find.CurrentMap.resourceCounter.GetCount(thingDef);

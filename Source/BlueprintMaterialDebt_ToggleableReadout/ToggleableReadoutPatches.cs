@@ -8,7 +8,6 @@ internal static class ToggleableReadoutPatches
 {
     static ToggleableReadoutPatches()
     {
-        var harmony = new Harmony("me.lubar.BlueprintMaterialDebt.ToggleableReadout");
-        harmony.PatchAll();
+        new Harmony("me.lubar.BlueprintMaterialDebt.ToggleableReadout").PatchAll();
     }
 }

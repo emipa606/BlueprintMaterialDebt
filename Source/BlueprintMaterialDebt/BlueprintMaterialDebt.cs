@@ -10,7 +10,7 @@ public class BlueprintMaterialDebt : ModBase
 {
     public static bool SubtractResources = true;
 
-    internal static Texture2D ToggleIcon = ContentFinder<Texture2D>.Get("BlueprintMaterialDebtOverlayIcon");
+    internal static readonly Texture2D ToggleIcon = ContentFinder<Texture2D>.Get("BlueprintMaterialDebtOverlayIcon");
 
     internal static SettingHandle<bool> IncludeForbidden;
     public override string ModIdentifier => "me.lubar.BlueprintMaterialDebt";

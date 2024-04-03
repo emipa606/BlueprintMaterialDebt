@@ -1,16 +1,16 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <OutputPath>..\..\Mods\ToggleableReadouts\1.4\Assemblies</OutputPath>
+    <OutputPath>..\..\Mods\ToggleableReadouts\1.5\Assemblies</OutputPath>
     <TargetFramework>net48</TargetFramework>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <FileVersion>1.4.0</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>*</Version>
+      <Version>1.5.4053-beta</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
       <IncludeAssets>compile; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -18,16 +18,16 @@
       <Version>*</Version>
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
-    <ProjectReference Include="..\BlueprintMaterialDebt\BlueprintMaterialDebt.csproj" >
-	    <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
-	    <CopyLocal>False</CopyLocal>
-	    <Private>false</Private>
-	    <ExcludeAssets>all</ExcludeAssets>
+    <Reference Include="ToggleableReadouts">
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\2661792499\1.4\Assemblies\ToggleableReadouts.dll</HintPath>
+      <CopyLocal>False</CopyLocal>
+      <Private>false</Private>
+    </Reference>
+    <ProjectReference Include="..\BlueprintMaterialDebt\BlueprintMaterialDebt.csproj">
+      <CopyLocalSatelliteAssemblies>False</CopyLocalSatelliteAssemblies>
+      <CopyLocal>False</CopyLocal>
+      <Private>false</Private>
+      <ExcludeAssets>all</ExcludeAssets>
     </ProjectReference>
-	  <Reference Include="ToggleableReadouts">
-		  <HintPath>..\..\..\..\..\..\workshop\content\294100\2661792499\1.4\Assemblies\ToggleableReadouts.dll</HintPath>
-		  <CopyLocal>False</CopyLocal>
-		  <Private>false</Private>
-	  </Reference>
   </ItemGroup>
 </Project>
