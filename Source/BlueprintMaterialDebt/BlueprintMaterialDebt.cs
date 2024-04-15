@@ -9,7 +9,6 @@ public class BlueprintMaterialDebt : Mod
 {
     public static bool SubtractResources = true;
 
-    internal static readonly Texture2D ToggleIcon = ContentFinder<Texture2D>.Get("BlueprintMaterialDebtOverlayIcon");
     public static BlueprintSettings settings;
 
     public BlueprintMaterialDebt(ModContentPack content) : base(content)
@@ -33,4 +32,10 @@ public class BlueprintMaterialDebt : Mod
 public class BlueprintSettings : ModSettings
 {
     internal static bool IncludeForbidden;
+}
+
+[StaticConstructorOnStartup]
+public static class BlueprintTextures
+{
+    internal static readonly Texture2D ToggleIcon = ContentFinder<Texture2D>.Get("BlueprintMaterialDebtOverlayIcon");
 }
