@@ -32,6 +32,11 @@ public class BlueprintMaterialDebt : Mod
 public class BlueprintSettings : ModSettings
 {
     internal static bool IncludeForbidden;
+
+    public override void ExposeData()
+    {
+        Scribe_Values.Look(ref IncludeForbidden, "includeForbidden", true);
+    }
 }
 
 [StaticConstructorOnStartup]
