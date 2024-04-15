@@ -14,14 +14,14 @@ internal static class PlaySettings_DoPlaySettingsGlobalControls_Patch
             return;
         }
 
-        if (row == null || BlueprintMaterialDebt.ToggleIcon == null)
+        if (row == null || BlueprintTextures.ToggleIcon == null)
         {
             return;
         }
 
         row.ToggleableIcon(
             ref BlueprintMaterialDebt.SubtractResources,
-            BlueprintMaterialDebt.ToggleIcon,
+            BlueprintTextures.ToggleIcon,
             "BlueprintMaterialDebt_toggleTip".Translate(),
             SoundDefOf.Mouseover_ButtonToggle
         );

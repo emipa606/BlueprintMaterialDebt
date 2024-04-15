@@ -28,7 +28,7 @@ public static class ResourceCounter_UpdateResourceCounts_Patch
                 continue;
             }
 
-            if (blueprint.IsForbidden(Faction.OfPlayer) && !BlueprintMaterialDebt.IncludeForbidden)
+            if (blueprint.IsForbidden(Faction.OfPlayer) && !BlueprintSettings.IncludeForbidden)
             {
                 continue;
             }
@@ -53,7 +53,7 @@ public static class ResourceCounter_UpdateResourceCounts_Patch
                 continue;
             }
 
-            if (frame.IsForbidden(Faction.OfPlayer) && !BlueprintMaterialDebt.IncludeForbidden)
+            if (frame.IsForbidden(Faction.OfPlayer) && !BlueprintSettings.IncludeForbidden)
             {
                 continue;
             }
