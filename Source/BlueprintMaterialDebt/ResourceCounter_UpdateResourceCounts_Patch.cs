@@ -60,13 +60,15 @@ public static class ResourceCounter_UpdateResourceCounts_Patch
 
             foreach (var material in frame.TotalMaterialCost())
             {
-                if (neededAmounts.ContainsKey(material.thingDef))
+                var amountLeft = material.count - frame.resourceContainer.TotalStackCountOfDef(material.thingDef);
+                if (amountLeft == 0)
                 {
-                    neededAmounts[material.thingDef] += material.count;
+                    continue;
                 }
-                else
+
+                if (!neededAmounts.TryAdd(material.thingDef, amountLeft))
                 {
-                    neededAmounts.Add(material.thingDef, material.count);
+                    neededAmounts[material.thingDef] += amountLeft;
                 }
             }
         }
