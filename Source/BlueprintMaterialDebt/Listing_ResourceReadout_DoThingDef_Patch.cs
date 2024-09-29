@@ -17,12 +17,14 @@ internal static class Listing_ResourceReadout_DoThingDef_Patch
         }
 
         var count = ___map.resourceCounter.GetCount(thingDef);
+
+        var warningColor = count > 0 ? Color.yellow : Color.red;
+
         if (ResourceCounter_UpdateResourceCounts_Patch.neededAmounts.TryGetValue(thingDef, out var neededAmount))
         {
             count -= neededAmount;
         }
-
-        if (count == 0)
+        else if (count == 0)
         {
             return false;
         }
@@ -54,9 +56,9 @@ internal static class Listing_ResourceReadout_DoThingDef_Patch
         };
 
         var previousColor = GUI.color;
-        if (count < 0)
+        if (count <= 0)
         {
-            GUI.color = Color.yellow;
+            GUI.color = warningColor;
         }
 
         Widgets.Label(rect3, count.ToStringCached());

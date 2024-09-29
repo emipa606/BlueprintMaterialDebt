@@ -22,16 +22,16 @@ internal static class ResourceReadout_DrawResourceSimple_Patch
 
         rect.y += 2f;
         var count = Find.CurrentMap.resourceCounter.GetCount(thingDef);
-
+        var warningColor = count > 0 ? Color.yellow : Color.red;
         if (ResourceCounter_UpdateResourceCounts_Patch.neededAmounts.TryGetValue(thingDef, out var neededAmount))
         {
             count -= neededAmount;
         }
 
         var previousColor = GUI.color;
-        if (count < 0)
+        if (count <= 0)
         {
-            GUI.color = Color.yellow;
+            GUI.color = warningColor;
         }
 
         Widgets.Label(new Rect(34f, rect.y, rect.width - 34f, rect.height), count.ToStringCached());
