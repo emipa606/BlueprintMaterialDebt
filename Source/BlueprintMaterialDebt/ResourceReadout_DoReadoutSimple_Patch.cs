@@ -21,6 +21,11 @@ internal static class ResourceReadout_DoReadoutSimple_Patch
         }
 
         __state = (Dictionary<ThingDef, int>)countedAmountsFieldInfo.GetValue(__instance);
+        if (__state == null)
+        {
+            __state = new Dictionary<ThingDef, int>();
+        }
+
         var countedAmounts = new Dictionary<ThingDef, int>(__state);
 
         foreach (var neededAmount in ResourceCounter_UpdateResourceCounts_Patch.neededAmounts)

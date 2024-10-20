@@ -1,5 +1,8 @@
 # Changelog for BlueprintMaterialDebt
 
+1.5.3 - Fixed a possible null exception
+
+
 1.5.2 - Should now show resources debt even if no amount of that resource are stored. Also shows it in red if stored resource are zero.
 
 
