@@ -5,9 +5,9 @@ using Verse;
 namespace BlueprintMaterialDebt;
 
 [HarmonyPatch(typeof(PlaySettings), nameof(PlaySettings.DoPlaySettingsGlobalControls), typeof(WidgetRow), typeof(bool))]
-internal static class PlaySettings_DoPlaySettingsGlobalControls_Patch
+internal static class PlaySettings_DoPlaySettingsGlobalControls
 {
-    private static void Postfix(WidgetRow row, bool worldView)
+    public static void Postfix(WidgetRow row, bool worldView)
     {
         if (worldView)
         {

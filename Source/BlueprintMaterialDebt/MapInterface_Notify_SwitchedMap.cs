@@ -4,10 +4,10 @@ using RimWorld;
 namespace BlueprintMaterialDebt;
 
 [HarmonyPatch(typeof(MapInterface), nameof(MapInterface.Notify_SwitchedMap))]
-internal static class MapInterface_Notify_SwitchedMap_Patch
+internal static class MapInterface_Notify_SwitchedMap
 {
-    private static void Postfix()
+    public static void Postfix()
     {
-        ResourceCounter_UpdateResourceCounts_Patch.Reset();
+        ResourceCounter_UpdateResourceCounts.Reset();
     }
 }

@@ -6,9 +6,9 @@ using Verse;
 namespace BlueprintMaterialDebt;
 
 [HarmonyPatch(typeof(Listing_ResourceReadout), "DoThingDef", typeof(ThingDef), typeof(int))]
-internal static class Listing_ResourceReadout_DoThingDef_Patch
+internal static class Listing_ResourceReadout_DoThingDef
 {
-    private static bool Prefix(Listing_ResourceReadout __instance, Map ___map, float ___nestIndentWidth,
+    public static bool Prefix(Listing_ResourceReadout __instance, Map ___map, float ___nestIndentWidth,
         ref float ___curY, ref ThingDef thingDef, ref int nestLevel)
     {
         if (!BlueprintMaterialDebt.SubtractResources)
@@ -20,7 +20,7 @@ internal static class Listing_ResourceReadout_DoThingDef_Patch
 
         var warningColor = count > 0 ? Color.yellow : Color.red;
 
-        if (ResourceCounter_UpdateResourceCounts_Patch.neededAmounts.TryGetValue(thingDef, out var neededAmount))
+        if (ResourceCounter_UpdateResourceCounts.neededAmounts.TryGetValue(thingDef, out var neededAmount))
         {
             count -= neededAmount;
         }

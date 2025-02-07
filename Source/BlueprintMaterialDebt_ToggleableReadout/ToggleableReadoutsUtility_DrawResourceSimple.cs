@@ -8,7 +8,7 @@ using Verse;
 namespace BlueprintMaterialDebt.ToggleableReadout;
 
 [HarmonyPatch]
-internal static class ToggleableReadoutsUtility_DrawResourceSimple_Patch
+internal static class ToggleableReadoutsUtility_DrawResourceSimple
 {
     public static MethodBase TargetMethod()
     {
@@ -24,7 +24,7 @@ internal static class ToggleableReadoutsUtility_DrawResourceSimple_Patch
         }
 
         var thingDef = (ThingDef)readOut.def;
-        if (!ResourceCounter_UpdateResourceCounts_Patch.neededAmounts.TryGetValue(thingDef, out var neededAmount))
+        if (!ResourceCounter_UpdateResourceCounts.neededAmounts.TryGetValue(thingDef, out var neededAmount))
         {
             return;
         }

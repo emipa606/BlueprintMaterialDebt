@@ -1,5 +1,8 @@
 # Changelog for BlueprintMaterialDebt
 
+1.5.4 - Should now work correctly when not using categorized view
+
+
 1.5.3 - Fixed a possible null exception
 
 

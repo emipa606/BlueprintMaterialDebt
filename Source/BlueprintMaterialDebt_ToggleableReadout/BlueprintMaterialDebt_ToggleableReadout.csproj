@@ -1,12 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputPath>..\..\Mods\ToggleableReadouts\1.5\Assemblies</OutputPath>
-    <TargetFramework>net48</TargetFramework>
+    <TargetFramework>net481</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
     <DebugType>None</DebugType>
     <LangVersion>latest</LangVersion>
-    <FileVersion>1.5.3</FileVersion>
+    <FileVersion>1.5.4</FileVersion>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -19,7 +19,7 @@
       <ExcludeAssets>runtime</ExcludeAssets>
     </PackageReference>
     <Reference Include="ToggleableReadouts">
-      <HintPath>..\..\..\..\..\..\workshop\content\294100\2661792499\1.4\Assemblies\ToggleableReadouts.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\workshop\content\294100\3261317086\1.5\Assemblies\ToggleableReadouts.dll</HintPath>
       <CopyLocal>False</CopyLocal>
       <Private>false</Private>
     </Reference>

@@ -6,12 +6,12 @@ using Verse;
 namespace BlueprintMaterialDebt;
 
 [HarmonyPatch(typeof(ResourceCounter), nameof(ResourceCounter.UpdateResourceCounts))]
-public static class ResourceCounter_UpdateResourceCounts_Patch
+public static class ResourceCounter_UpdateResourceCounts
 {
     private static readonly HashSet<ThingDef> forcedVisible = [];
     public static readonly Dictionary<ThingDef, int> neededAmounts = new Dictionary<ThingDef, int>();
 
-    private static void Postfix(Map ___map)
+    public static void Postfix(Map ___map)
     {
         if (___map != Find.CurrentMap)
         {

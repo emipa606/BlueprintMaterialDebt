@@ -7,11 +7,11 @@ using Verse;
 namespace BlueprintMaterialDebt;
 
 [HarmonyPatch(typeof(ResourceReadout), nameof(ResourceReadout.DrawResourceSimple), typeof(Rect), typeof(ThingDef))]
-internal static class ResourceReadout_DrawResourceSimple_Patch
+internal static class ResourceReadout_DrawResourceSimple
 {
     private static readonly MethodInfo DrawIcon = AccessTools.Method(typeof(ResourceReadout), "DrawIcon");
 
-    private static bool Prefix(ResourceReadout __instance, ref Rect rect, ref ThingDef thingDef)
+    public static bool Prefix(ResourceReadout __instance, ref Rect rect, ref ThingDef thingDef)
     {
         if (!BlueprintMaterialDebt.SubtractResources)
         {
@@ -23,7 +23,7 @@ internal static class ResourceReadout_DrawResourceSimple_Patch
         rect.y += 2f;
         var count = Find.CurrentMap.resourceCounter.GetCount(thingDef);
         var warningColor = count > 0 ? Color.yellow : Color.red;
-        if (ResourceCounter_UpdateResourceCounts_Patch.neededAmounts.TryGetValue(thingDef, out var neededAmount))
+        if (ResourceCounter_UpdateResourceCounts.neededAmounts.TryGetValue(thingDef, out var neededAmount))
         {
             count -= neededAmount;
         }
