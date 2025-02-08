@@ -1,5 +1,8 @@
 # Changelog for BlueprintMaterialDebt
 
+1.5.5 - Last publish failed to to Steam being down
+
+
 1.5.4 - Should now work correctly when not using categorized view
 
 
