@@ -9,7 +9,7 @@ namespace BlueprintMaterialDebt;
 public static class ResourceCounter_UpdateResourceCounts
 {
     private static readonly HashSet<ThingDef> forcedVisible = [];
-    public static readonly Dictionary<ThingDef, int> neededAmounts = new Dictionary<ThingDef, int>();
+    public static readonly Dictionary<ThingDef, int> neededAmounts = new();
 
     public static void Postfix(Map ___map)
     {

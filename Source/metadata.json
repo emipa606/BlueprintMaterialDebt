@@ -2,11 +2,17 @@
   "Continued": true,
   "CanAdd": "0",
   "CanRemove": "0",
-  "PreviewVersion": "1.5",
+  "PreviewVersion": "1.6",
   "SocialImageSet": true,
   "SearchTags": [
     " blueprint materials",
     " material count"
   ],
-  "LastXmlCleaning": "2025-02-08T20:31:25.8570991+01:00"
+  "LastXmlCleaning": "2025-07-22T22:26:28.7462873+02:00",
+  "Patches": false,
+  "Defs": false,
+  "Assemblies": true,
+  "LinesOfCode": 13591,
+  "LinesOfXML": 0,
+  "CodeBaseSize": 66
 }

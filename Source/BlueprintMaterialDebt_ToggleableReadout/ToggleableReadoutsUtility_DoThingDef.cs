@@ -16,8 +16,8 @@ internal static class ToggleableReadoutsUtility_DoThingDef
             ?.GetMethod("DoThingDef", BindingFlags.NonPublic | BindingFlags.Static);
     }
 
-    public static void
-        Prefix(ReadoutCache readout) // if this was capitalized the same way in both functions, there wouldn't need to be two identical patches
+    public static void Prefix(ReadoutCache readout)
+        // if this was capitalized the same way in both functions, there wouldn't need to be two identical patches
     {
         if (!BlueprintMaterialDebt.SubtractResources)
         {

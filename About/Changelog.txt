@@ -1,5 +1,8 @@
 # Changelog for BlueprintMaterialDebt
 
+1.6.0 - Mod updated for 1.6 and passed autotests
+
+
 1.5.5 - Last publish failed to to Steam being down
 
 
