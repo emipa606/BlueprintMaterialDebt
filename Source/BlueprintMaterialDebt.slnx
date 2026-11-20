@@ -9,4 +9,10 @@
     <BuildType Project="Release" />
   </Project>
   <Project Path="BlueprintMaterialDebt_ToggleableReadout/BlueprintMaterialDebt_ToggleableReadout.csproj" />
+  <Folder Name="/XML/About/">
+    <File Path="../About/about.xml" />
+  </Folder>
+  <Folder Name="/XML/Languages/English/Keyed/">
+    <File Path="../Languages/English/Keyed/English.xml" />
+  </Folder>
 </Solution>

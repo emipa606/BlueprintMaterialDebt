@@ -1,4 +1,5 @@
-﻿using HarmonyLib;
+﻿using System.Reflection;
+using HarmonyLib;
 using Verse;
 
 namespace BlueprintMaterialDebt.ToggleableReadout;
@@ -8,6 +9,6 @@ internal static class ToggleableReadoutPatches
 {
     static ToggleableReadoutPatches()
     {
-        new Harmony("me.lubar.BlueprintMaterialDebt.ToggleableReadout").PatchAll();
+        new Harmony("me.lubar.BlueprintMaterialDebt.ToggleableReadout").PatchAll(Assembly.GetExecutingAssembly());
     }
 }
